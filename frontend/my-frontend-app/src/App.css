@@ -1,0 +1,84 @@
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  width: 400px;  
+  margin-bottom: 20px;
+  border: 2px solid #333; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+
+.cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd; 
+  background-color: #ffffff; 
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+
+.cell.selected {
+  background-color: #3498db;  
+  transform: scale(1.1); 
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+
+.cell.path {
+  background-color: blue;
+  transform: scale(1.05); 
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2980b9;
+  transform: scale(1.05); 
+}
+p {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-top: 10px;
+  font-weight: bold;
+}
